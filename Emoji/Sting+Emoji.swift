@@ -10,9 +10,9 @@ import UIKit
 
 extension String {
     func stringToEmoji() -> String {
-        let scanner = NSScanner(string: self)
+        let scanner = Scanner(string: self)
         var result: UInt32 = 0
-        scanner.scanHexInt(&result)
-        return String(Character(UnicodeScalar(result)))
+        scanner.scanHexInt32(&result)
+        return String(Character(UnicodeScalar(result)!))
     }
 }
